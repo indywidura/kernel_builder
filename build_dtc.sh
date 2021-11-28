@@ -21,7 +21,7 @@ MakeZip() {
     fi
     cp -af $MainPath/out/arch/arm64/boot/Image.gz-dtb $Any
     sed -i "s/kernel.string=.*/kernel.string=$KERNEL_NAME-$HeadCommit test by $KBUILD_BUILD_USER/g" anykernel.sh
-    zip -r9 $MainPath/"[$Compiler][Q-OSS]-$ZIP_KERNEL_VERSION-$KERNEL_NAME-$TIME.zip" * -x .git README.md *placeholder
+    zip -r9 $MainPath/"$Compiler-Q-OSS-$ZIP_KERNEL_VERSION-$KERNEL_NAME-$TIME.zip" * -x .git README.md *placeholder
     cd $MainPath
 }
 
