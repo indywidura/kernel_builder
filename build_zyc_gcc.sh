@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 # Defined path
 MainPath="$(pwd)"
 GCC64="$(pwd)/../GCC64"
