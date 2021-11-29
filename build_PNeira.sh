@@ -12,9 +12,9 @@ MakeZip(){
     else
         cd $Any
         git reset --hard
-        git fetch origin master
-        git checkout master
-        git reset --hard origin/master
+        git checkout q-oss
+        git fetch origin q-oss
+        git reset --hard origin/q-oss
     fi
     cd $Any
     cp -af $MainPath/out/arch/arm64/boot/Image.gz-dtb $Any
