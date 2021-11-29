@@ -14,9 +14,9 @@ MakeZip() {
     else
         cd $Any
         git reset --hard
-        git checkout master
-        git fetch origin master
-        git reset --hard origin/master
+        git checkout q-oss
+        git fetch origin q-oss
+        git reset --hard origin/q-oss
     fi
     cp -af $MainPath/out/arch/arm64/boot/Image.gz-dtb $Any
     sed -i "s/kernel.string=.*/kernel.string=$KERNEL_NAME-$HeadCommit test by $KBUILD_BUILD_USER/g" anykernel.sh
